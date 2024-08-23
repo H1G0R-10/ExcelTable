@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela para excel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>   
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    
+    <h1>Tabela para Excel</h1>
+    <section>
+        <div class="wrap-inputs">
+            <label for="nome">Descrição</label>
+            <input id="nome" type="text" placeholder="Digite o nome do produto">
+        </div>
+        <div class="wrap-inputs">
+            <label for="valor">Valor do produto</label>
+            <input id="valor" type="number" placeholder="Digite o valor do produto">
+        </div>
+        <div class="wrap-inputs">
+            <label for="quantidade">Quantidade unitária</label>
+            <input id="quantidade" type="number" placeholder="Digite quantidade unitária">
+        </div>
+    </section>
+    <div class="wrap-btn">
+        <button onclick="adicionarItem()" class="btn">Inserir na tabela</button>
+    </div>
+    <div class="wrap-tb">
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="wrap-btn">
+        <button class="btn" onclick="exportarParaExcel()">Gerar Excel</button>
+    </div>
 </body>
+
 </html>

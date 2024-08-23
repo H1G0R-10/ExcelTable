@@ -1,0 +1,97 @@
+:root{
+    --neymar: #d9d9d9;
+    --neymarbranco: #ffff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 2vh;
+}
+
+section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1vw;
+    margin-top: 4vh;
+}
+
+.wrap-inputs{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    padding-left: 20px;
+    margin-bottom: 1vh;
+}
+
+input{
+    border-radius: 999px;
+    width:300px;
+    height: 53px;
+    border: none;
+    background-color: var(--neymar);
+    padding-left: 20px;
+}
+
+.wrap-btn{
+    width: 100%;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.btn{
+    background-color: rgba(19, 53, 19, 0.929);
+    color: var(--neymarbranco);
+    padding: 10px 30px;
+    border-radius: 999px;
+    border: none;
+    transition: all 200ms linear;
+    border: 2px solid transparent;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transition: all 200ms linear;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 2px solid green;
+    color: rgb(110, 204, 110);
+}
+
+#tabela{
+    background-color: #d9d9d9;
+    width: 80%;
+    text-align: left;
+}
+
+.wrap-tb{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+}
+thead{
+    background-color: #090909;
+    color: var(--neymarbranco);
+}
+
+@media (width < 300px){
+    input{
+        width:200px;
+        height: 45px;
+    }
+}
